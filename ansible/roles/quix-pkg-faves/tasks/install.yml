@@ -1,0 +1,13 @@
+---
+- name: Install quixotes favorite packages
+  apt:
+    name: {{ item }}
+    state: present
+    update_cache: yes
+  with_items:
+    - lftp
+    - code
+  tags:
+    - raspberrypi
+
+- name: Install golang

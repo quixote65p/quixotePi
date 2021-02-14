@@ -1,0 +1,6 @@
+---
+# tasks file for quix-pkg-faves
+
+- name: "{{ action | title | replace('-', ' ') }} {{ ansible_role_name }}"
+  include_tasks:
+    file: "{{ action }}.yml"
